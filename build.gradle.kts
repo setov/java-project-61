@@ -2,6 +2,7 @@ plugins {
     application
     checkstyle
     jacoco
+    id("checkstyle")
     id("java")
 }
 
@@ -28,3 +29,4 @@ tasks.getByName("run", JavaExec::class) {
 }
 
 tasks.jacocoTestReport { reports { xml.required.set(true) } }
+
