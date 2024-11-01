@@ -18,7 +18,6 @@ jobs:
         with:
           gradle-version: 8.7
       - run: ./gradlew checkstyleMain
-      - run: ./gradlew jacocoTestReport
       - name: Code Climate Coverage Action
         uses: paambaati/codeclimate-action@v9.0.0
         env:
@@ -26,4 +25,4 @@ jobs:
            JACOCO_SOURCE_PATH: "${{github.workspace}}/src/main/java"
         with:
            coverageCommand: make report
-           coverageLocations: ${{github.workspace}}/build/reports/checkstyle/main.html
+           coverageLocations: ${{github.workspace}}/jacoco/jacoco.xml:jacoco
