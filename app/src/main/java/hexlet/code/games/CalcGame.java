@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 
 public class CalcGame {
     private static final String DESKRIPTION = "What is the result of the expression?";
-    static int roundCount = Engine.ROUND_COUNT;
+    private static int roundCount = Engine.ROUND_COUNT;
 
     private static String[][] getCalcData() {
         int dataQuantity = 2;

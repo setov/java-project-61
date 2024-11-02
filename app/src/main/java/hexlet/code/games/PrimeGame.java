@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 
 public class PrimeGame {
     private static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    static int roundCount = Engine.ROUND_COUNT;
+    private static int roundCount = Engine.ROUND_COUNT;
 
     private static String[][] getPrimeData() {
         int dataQuantity = 2;

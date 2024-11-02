@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 
 public class EvenOddGame {
     private static final String DESKRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-    static int roundCount = Engine.ROUND_COUNT;
+    private static int roundCount = Engine.ROUND_COUNT;
 
     private static String[][] evenOddData() {
         int dataQuantity = 2;

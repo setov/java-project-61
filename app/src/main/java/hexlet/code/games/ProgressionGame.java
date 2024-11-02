@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 
 public class ProgressionGame {
     private static final String DESCRIPTION = "What number is missing in the progression?";
-    static int roundCount = Engine.ROUND_COUNT;
+    private static int roundCount = Engine.ROUND_COUNT;
     private static final int LENGTH_PROGRESSION = 10;
 
     private static String[][] getProgressionData() {
