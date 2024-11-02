@@ -9,3 +9,5 @@
 [Even-odd game](https://asciinema.org/a/EaIrbcSLSzInTgeIupIgGpTl9)
 
 [Calc game](https://asciinema.org/a/aQ7S4lhPPSSPc48m66nrOrmhD)
+
+[GCD game](https://asciinema.org/a/Ytsd9Vj8N827CWSLIvJTRFMZ9)

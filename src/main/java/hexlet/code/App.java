@@ -3,6 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 import hexlet.code.games.EvenOddGame;
 import hexlet.code.games.CalcGame;
+import hexlet.code.games.GcdGame;
 
 public class App {
     public static void main(String[] args) {
@@ -14,6 +15,7 @@ public class App {
             System.out.println("1 - Greet");
             System.out.println("2 - Even");
             System.out.println("3 - Calc");
+            System.out.println("4 - GCD");
             System.out.println("0 - Exit");
             System.out.print("Your choice: ");
 
@@ -28,6 +30,9 @@ public class App {
                     return;
                 case 3:
                     CalcGame.calcGame();
+                    return;
+                case 4:
+                    GcdGame.gcdGame();
                     return;
                 case 0:
                     System.out.println("Exiting the game. Goodbye!");
