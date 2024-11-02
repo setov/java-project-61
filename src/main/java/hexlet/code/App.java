@@ -5,6 +5,7 @@ import hexlet.code.games.EvenOddGame;
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.GcdGame;
 import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.PrimeGame;
 
 public class App {
     public static void main(String[] args) {
@@ -18,6 +19,7 @@ public class App {
             System.out.println("3 - Calc");
             System.out.println("4 - GCD");
             System.out.println("5 - Progression");
+            System.out.println("6 - Prime");
             System.out.println("0 - Exit");
             System.out.print("Your choice: ");
 
@@ -38,6 +40,9 @@ public class App {
                     return;
                 case 5:
                     ProgressionGame.progressionGame();
+                    return;
+                case 6:
+                    PrimeGame.primeGame();
                     return;
                 case 0:
                     System.out.println("Exiting the game. Goodbye!");

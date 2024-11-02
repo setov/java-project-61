@@ -12,4 +12,4 @@
 
 [GCD game](https://asciinema.org/a/Ytsd9Vj8N827CWSLIvJTRFMZ9)
 
-[Progression game](https://asciinema.org/a/dluBZq8gsEFbUPdXYSBy0FPlS)
+[Progression game](https://asciinema.org/a/dluBZq8gsEFbUPdXYSBy0FPlS data-speed="4")
