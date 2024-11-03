@@ -19,11 +19,16 @@ jobs:
           gradle-version: 8.7
       - run: ./gradlew checkstyleMain
         working-directory: app
-      - name: Test & publish code coverage
+      - name: Run tests and generate coverage report
         run: |
-         make report
-         paambaati/codeclimate-action@v9.0.0
+          cd app
+          ./gradlew test jacocoTestReport
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v9.0.0
         env:
-           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
-           JACOCO_SOURCE_PATH: "${{github.workspace}}/app/src/main/java"
-        working-directory: app
+           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+           JACOCO_SOURCE_PATH: "${{ github.workspace }}/app/src/main/java"
+        with:
+           coverageCommand: make report
+           coverageLocations: "${{ github.workspace }}/app/build/reports/jacoco/test/jacocoTestReport.xml:jacoco"
+
