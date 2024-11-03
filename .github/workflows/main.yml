@@ -19,10 +19,6 @@ jobs:
           gradle-version: 8.7
       - run: ./gradlew checkstyleMain
         working-directory: app
-      - name: Run tests and generate coverage report
-        run: |
-          cd app
-          ./gradlew test jacocoTestReport
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v9.0.0
         env:
@@ -30,5 +26,6 @@ jobs:
            JACOCO_SOURCE_PATH: "${{ github.workspace }}/app/src/main/java"
         with:
            coverageCommand: make report
+           workingDirectory: app
            coverageLocations: "${{ github.workspace }}/app/build/reports/jacoco/test/jacocoTestReport.xml:jacoco"
 
