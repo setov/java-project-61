@@ -7,6 +7,8 @@ public class ProgressionGame {
     private static final String DESCRIPTION = "What number is missing in the progression?";
     private static int roundCount = Engine.ROUND_COUNT;
     private static final int LENGTH_PROGRESSION = 10;
+    private static final int UPPER_BOUND_ROUND_INT_START = 21;
+    private static final int UPPER_BOUND_ROUND_INT_STEP = 10;
 
     private static String[][] getProgressionData() {
         int dataQuantity = 2;
@@ -14,8 +16,8 @@ public class ProgressionGame {
         Random random = new Random();
 
         for (var row = 0; row < roundCount; row += 1) {
-            int startSequence = random.nextInt(1, 21);
-            int stepSequence = random.nextInt(2, 10);
+            int startSequence = random.nextInt(1, UPPER_BOUND_ROUND_INT_START);
+            int stepSequence = random.nextInt(2, UPPER_BOUND_ROUND_INT_STEP);
 
             int[] progression = getProgression(startSequence, stepSequence, LENGTH_PROGRESSION);
             int randKey = random.nextInt(LENGTH_PROGRESSION);

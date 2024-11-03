@@ -6,6 +6,8 @@ import hexlet.code.Engine;
 public class CalcGame {
     private static final String DESKRIPTION = "What is the result of the expression?";
     private static int roundCount = Engine.ROUND_COUNT;
+    private static final int UPPER_BOUND_ROUND_INT = 50;
+    private static final int UPPER_BOUND_OP_INDEX = 3;
 
     private static String[][] getCalcData() {
         int dataQuantity = 2;
@@ -13,9 +15,9 @@ public class CalcGame {
         Random random = new Random();
 
         for (var row = 0; row < roundCount; row += 1) {
-            int operationIndex = random.nextInt(3);
-            int operandTwo = random.nextInt(1, 50);
-            int operandOne = random.nextInt(operandTwo, 50);
+            int operationIndex = random.nextInt(UPPER_BOUND_OP_INDEX);
+            int operandTwo = random.nextInt(1, UPPER_BOUND_ROUND_INT);
+            int operandOne = random.nextInt(operandTwo, UPPER_BOUND_ROUND_INT);
             int answer;
 
             switch (operationIndex) {
